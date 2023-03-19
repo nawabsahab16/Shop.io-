@@ -82,7 +82,23 @@ body{
   color: var(--text-color);
 }
 
+h1,h2,h3{
+  color: var(--title-color);
+  font-weight : var(--font-medium);
+}
 
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration : none;
+}
+
+img{
+  max-width: 100%;
+
+}
 
 /* ==========================Theme =========================*/
 
@@ -104,8 +120,110 @@ body{
 
 /* =============================Resuable CSS classes ===================*/
 
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 
+
+}
+
+.grid{
+  display : grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding : 4.5rem 0 2rem;
+}
+
+
+.section-title {
+  font-size : var(--h1-font-size);
+  text-align : center;
+  margin-bottom : 3rem;
+}
+
+
+.main{
+
+  overflow : hidden; /* For Animation ScrollReveal*/
+
+
+
+
+
+
+}
 /*============================Header & Nav ============================*/
+
+
+.header {
+
+  position : fixed;
+  top: 0;
+  left : 0;
+  width : 100%;
+  background-color : transparent;
+  z-index : var(--z-fixed);
+  transition : .4s;
+
+}
+
+.nav {
+  height: var(--header-height);
+  display : flex;
+  justify-content: space-between;
+  align-items : center;
+
+}
+
+.nav__logo{
+  color : var(--title-color);
+  font-weight : var(--font-medium);
+
+}
+@media screen and (max-width : 1023px){
+  .nav__menu {
+    position : fixed;
+    bottom: 1.5rem;
+    background-color : var(--body-color);
+    box-shadow : 0 4px 12px hsla(220, 18%, 40%, .15);
+    width : 90%;
+    left : 0;
+    right : 0;
+    margin: 0 auto;
+    padding : 1.25rem 2.8rem;
+    border-radius : .5rem;
+  }
+  .nav__list {
+    display : flex;
+    justify-content: space-between;
+    align-items : center;
+  }
+
+  .nav__link{
+    color : var(--text-color-light);
+    font-weight : var(--font-medium);
+    display : grid;
+    justify-content: center;
+    row-gap: .25rem;
+
+
+  }
+  .nav__link {
+    font-size : 1.25rem;
+  }
+
+  .nav__link span{
+    font-size : .668rem;
+  }
+
+
+}
+
+
+
 
 
 
